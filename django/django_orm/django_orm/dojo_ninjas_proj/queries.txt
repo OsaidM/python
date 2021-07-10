@@ -1,0 +1,123 @@
+>>> from dojo_ninjas_app.models import *
+
+>>> Dojos.objects.create(name="Osaid", city="nablus", state="NA")
+<Dojos: Dojos object (1)>
+
+>>> Dojos.objects.create(name="khaled", city="tulkarem", state="TU")
+<Dojos: Dojos object (2)>
+
+>>> Dojos.objects.create(name="Omar", city="tulkarem", state="TU")
+<Dojos: Dojos object (3)>
+
+
+>>> c = Dojos.objects.get(id = 1)
+>>> c.delete()
+(1, {'dojo_ninjas_app.ninjas': 0, 'dojo_ninjas_app.Dojos': 1})
+
+>>> c = Dojos.objects.get(id = 2)
+>>> c.delete()
+(1, {'dojo_ninjas_app.ninjas': 0, 'dojo_ninjas_app.Dojos': 1})
+>>> c = Dojos.objects.get(id = 3)
+>>> c.delete()
+(1, {'dojo_ninjas_app.ninjas': 0, 'dojo_ninjas_app.Dojos': 1})
+>>> Dojos.objects.all()
+<QuerySet []>
+
+>>> Dojos.objects.create(name="Osaid", city="nablus", state="NA")
+<Dojos: Dojos object (4)>
+>>> Dojos.objects.create(name="khaled", city="tulkarem", state="TU")
+<Dojos: Dojos object (5)>
+>>> Dojos.objects.create(name="Omar", city="tulkarem", state="TU")
+<Dojos: Dojos object (6)>
+
+
+
+>>> this_dojo= Dojos.objects.get(id = 4)
+>>> ninja = ninjas.objects.create(first_name="Osaid", last_name="Makhalfih", ninja=this_dojo)
+
+>>> ninja = ninjas.objects.create(first_name="khaled1", last_name="omaria", ninja=this_dojo)
+
+>>> ninja = ninjas.objects.create(first_name="khaled2", last_name="omaria2", ninja=this_dojo)
+
+
+
+
+>>> this_dojo= Dojos.objects.get(id = 5)                                                     
+>>> ninja = ninjas.objects.create(first_name="khaled", last_name="noidea", ninja=this_dojo)
+
+>>> ninja = ninjas.objects.create(first_name="ahmad", last_name="B", ninja=this_dojo) 
+
+>>> ninja = ninjas.objects.create(first_name="ahm", last_name="B", ninja=this_dojo)
+
+
+>>> this_dojo= Dojos.objects.get(id = 6)
+>>> ninja = ninjas.objects.create(first_name="omar", last_name="alqassem", ninja=this_dojo)
+
+>>> ninja = ninjas.objects.create(first_name="mhmd", last_name="D", ninja=this_dojo)
+
+>>> ninja = ninjas.objects.create(first_name="mesta3jel", last_name="khalesni", ninja=this_dojo)
+
+
+
+new_dojo = Dojos.objects.get(id = 4)
+>>> new_dojo2 = Dojos.objects.get(id = 5)
+>>> new_dojo3 = Dojos.objects.get(id = 6)
+>>> new_ninja = ninjas.objects.create(first_name="firstNin",last_name="ninL",ninja = new_dojo)
+>>> new_ninja2 = ninjas.objects.create(first_name="secondNin",last_name="nin2L",ninja = new_dojo)
+>>> new_ninja3 = ninjas.objects.create(first_name="thirdNin",last_name="nin3L",ninja = new_dojo)
+
+
+
+
+
+>>> new_dojo = Dojos.objects.get(id = 4)
+>>> new_dojo2 = Dojos.objects.get(id = 5)
+>>> new_dojo3 = Dojos.objects.get(id = 6)
+>>> new_ninja = ninjas.objects.create(first_name="firstNin",last_name="ninL",ninja = new_dojo)
+
+>>> new_ninja2 = ninjas.objects.create(first_name="secondNin",last_name="nin2L",ninja = new_dojo)
+
+>>> new_ninja3 = ninjas.objects.create(first_name="thirdNin",last_name="nin3L",ninja = new_dojo)
+
+>>> new_ninja = ninjas.objects.create(first_name="SfirstNin",last_name="ninL",ninja = new_dojo2)
+
+>>> new_ninja2 = ninjas.objects.create(first_name="SsecondNin",last_name="nin2L",ninja = new_dojo2)
+
+>>> new_ninja3 = ninjas.objects.create(first_name="TsecondNin",last_name="nin3L",ninja = new_dojo2)
+
+>>> new_ninja = ninjas.objects.create(first_name="TfirstNin",last_name="ninL",ninja = new_dojo3)
+
+>>> new_ninja2 = ninjas.objects.create(first_name="TsecondtNin",last_name="nin2L",ninja = new_dojo2)
+
+>>> new_ninja2 = ninjas.objects.create(first_name="TsecondNin",last_name="nin2L",ninja = new_dojo3)
+
+>>> new_ninja3 = ninjas.objects.create(first_name="TthirdNin",last_name="nin3L",ninja = new_dojo3)
+
+
+first_dojo = Dojos.objects.first()
+
+>>> for dojo in first_dojo.ninjas.all():
+...     print(dojo)
+ninjas object (1)
+ninjas object (2)
+ninjas object (3)
+
+
+last_dojo = Dojos.objects.last()
+
+>>> for dojo in first_dojo.ninjas.all():
+...     print(dojo)
+ninjas object (7)
+ninjas object (9)
+ninjas object (10)
+
+
+last_ninja = ninjas.objects.last()
+
+>>> last_ninja.ninja
+<Dojos: Dojos object (6)>
+
+
+Dojos.objects.create(name="newDojo", city="dojosninjas", state="DN")
+
+

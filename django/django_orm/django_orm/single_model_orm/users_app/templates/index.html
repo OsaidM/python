@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            text-align: center;
+        }
+        table{
+            margin: auto;
+        }
+        form{
+            margin: auto;
+            width: 600px;
+        }
+        header table{
+            /* border: 2px solid black; */
+            box-shadow: 0px 0px 2px 2px black;
+            width: 800px;
+            text-align: left;
+            margin-bottom:60px ;
+        }
+        header table th{
+            background-color: darkgray;
+        }
+        footer table td{
+            text-align: left;
+        }
+        input[type=submit]{
+            margin-top: 30px;
+            height:40px;
+            width:120px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>All the Users</h1>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </thead>
+                <tbody>
+                    {% for user in all_users %}
+                    <tr>
+                        <td>{{user.id}}</td>
+                        <td>{{user.first_name}} {{user.last_name}}</td>
+                        <td>{{user.email_address}}</td>
+                        <td>{{user.age}}</td>
+                    </tr>
+                    {%endfor%}
+
+                </tbody>
+            </table>
+        </header>
+        <hr>
+        <footer>
+
+            <h1>Add a User</h1>
+            <form action="add" method="POST">
+                {% csrf_token %}
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="fname">First Name:</label></td>
+                            <td><input type="text" name="first_name" id="fname"></td>
+                            <td><label for="lastname">Last Name:</label></td>
+                            <td><input type="text" name="last_name" id="lname"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="text" name="email" id="email"></td>
+                            <td><label for="age">Age:</label></td>
+                            <td><input type="text" name="age" id="age"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="Add">
+            </form>
+            
+        </footer>
+    </main>
+</body>
+</html>

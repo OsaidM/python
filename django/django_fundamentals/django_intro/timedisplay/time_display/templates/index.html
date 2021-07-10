@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Time</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <h1>Displaying The Current Time</h1>
+    <h2>the current date and time:</h2>
+    <h3>
+        {{time}}
+    </h3>
+    <img src="{% static 'img/image.png' %}" alt="testingimg">
+
+</body>
+</html> 

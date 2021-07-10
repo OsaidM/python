@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div>
+        <h1>Hello</h1>
+        <img src="../static/rock.jpg" alt="rock">
+        <img src="../static/paper.jpg" alt="paper">
+        <img src="../static/scissors.jpg" alt="scissors">
+        <form method="post" action="/rps">
+            <label for="rps">Pick your play:</label>
+            <select name="rps" id="rps">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissor</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+            <p>
+                You Picked: {{name}}
+            </p>
+            <p>
+                Computer Picked: {{p2}}
+            </p>
+            <p>
+                The Result Is: {{r}}
+            </p>
+            
+            <table>
+                <caption>Score</caption>
+                <tr>
+                  <th>Status</th>
+                  <th>Count</th>
+                </tr>
+                
+                <tr>
+                <td>Wins</td>
+                <td>
+                    {{ session['counter'] }} 
+                </td>
+                </tr>
+                <tr>
+                <td>Lose</td>
+                <td>{{ session['counter2'] }} </td>
+                </tr>
+                <tr>
+                <td>Ties</td>
+                <td>{{ session['counter3'] }} </td>
+                </tr>
+              </table>
+
+
+    </div>
+</body>
+</html> 

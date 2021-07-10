@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+    background-color: rgb(104, 86, 86);
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    height:50px;
+    width: 50px;
+    margin: 0px;
+    
+}
+.color1{
+    background-color: #495c29;
+}
+.color2{
+    background-color: #ffffe0;
+}

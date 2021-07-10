@@ -1,0 +1,29 @@
+main{
+    border-radius: 5px;
+    width: 970px;
+    margin: 15px auto;
+    box-shadow: 0px 0px 3px 2px grey;
+    background-color: darkgray;
+}
+.card{
+    padding: 20px;
+    margin: 0px 60px;
+    box-shadow: 0px 0px 3px 2px grey;
+    background-color: cadetblue;
+}
+input{
+    margin-top:10px ;
+    margin-left: auto;
+}
+.row h1{
+    text-align: right;
+    margin-top: 30px;
+}
+form{
+    margin: 30px 0;
+}
+footer a{
+    margin: 15px 10px;
+    text-decoration: none;
+    color: white;
+}

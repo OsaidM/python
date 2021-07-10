@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojos & Ninjas</title>
+    <style>
+        main{
+            text-align: center;
+        }
+        table{
+            margin: auto;
+        }
+        form{
+            display: inline-block;
+            margin: auto;
+            width: 400px;
+        }
+        section table{
+            /* border: 2px solid black; */
+            box-shadow: 0px 0px 2px 2px black;
+            width: 800px;
+            text-align: left;
+            margin-bottom:60px ;
+        }
+        section table th{
+            background-color: darkgray;
+        }
+        aside table td{
+            text-align: left;
+        }
+        input[type=submit]{
+            margin-top: 30px;
+            height:30px;
+            width:70px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <header>
+            
+        
+        <form action="add/dojo" method="POST">
+            <h2>Add a Dojo</h2>
+            {% csrf_token %}
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City:</label></td>
+                        <td><input type="text" name="city" id="city"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State:</label></td>
+                        <td><input type="text" name="state" id="state"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Add"></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </form>
+
+        <form action="add/ninja" method="POST">
+            <h2>Add a Ninja</h2>
+            {% csrf_token %}
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="fname">First Name:</label></td>
+                        <td><input type="text" name="first_name" id="fname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name:</label></td>
+                        <td><input type="text" name="last_name" id="lname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dojo">Dojo:</label></td>
+                        <td>
+                            <select name="dojo" id="dojo">
+                                {% for dojo in all_dojos %}
+                                <option value="{{dojo.name}}">{{dojo.name}}</option>
+                                    {%endfor%}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Add"></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </form>
+
+        </header>
+        <hr>
+        <footer>
+
+            <h1>All the Dojos</h1>
+            <article>
+                {% for dojo in all_dojos %}
+                <h4>
+                    Ninjas at the {{dojo.name}} Dojo
+                </h4>
+                    {% for ninja in dojo.ninjas.all %}
+                    <ul>
+                        <li>{{ninja.first_name}} {{ninja.last_name}}</li>
+                    </ul>
+                    {%endfor%}
+                {%endfor%}
+            </article>
+        </footer>
+    </main>
+</body>
+</html>

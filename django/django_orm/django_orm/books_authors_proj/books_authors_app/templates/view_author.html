@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books & Authors</title>
+</head>
+<style>
+    main{
+        padding: 10px 10px 60px 30px ;
+        width:768px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 2px 1px gray;
+    }
+    select{
+        width:150px;
+        height:40px;
+        
+    }
+    input{
+        width:100px;
+        height:40px;
+        box-shadow: 1px 1px 2px 1px gray;
+    }
+</style>
+<body>
+    
+    <main>
+        
+        <h1>{{request.session.first_name}} {{request.session.last_name}}</h1>
+        <p>ID: {{request.session.id}}</p>
+        <p>Notes: {{request.session.notes}}</p>
+        <p>Books: 
+            <ul>
+                {% for book in author_books %}
+                <li>{{book.title}}</li>
+                {%endfor%}
+            </ul>
+        </p>
+        <form action="add_book_author/{{request.session.id}}" method="POST">
+            {% csrf_token %}
+        <select name="book" id="book">
+            {% for book in final %}
+            <option value="{{book.id}}">{{book.title}}</option>
+            {%endfor%}
+        </select>
+        <input type="submit" value="Add">
+        </form>
+    </main>
+
+</body>
+</html> 

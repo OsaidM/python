@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+} 
+img{
+    width:900px;
+    height:500px;
+}
+h1{
+    
+}
+h2,h3{
+    display:inline-block
+}

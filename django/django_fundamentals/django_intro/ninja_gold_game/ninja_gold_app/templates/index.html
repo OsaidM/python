@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: block;
+            width: 970px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+        header p{
+            display: inline-block;
+            margin-right:20px ;
+        }
+        header span{
+            /* border: 2px solid grey; */
+            box-shadow: 0px 0px 2px 2px black;
+            display: inline-block;
+            min-width: 200px;
+            padding: 10px;
+        }
+        article{
+            text-align: center;
+        }
+        article div{
+            box-shadow: 0px 0px 2px 2px black;
+            display: inline-block;
+            padding: 15px;
+            width: 200px;
+        }
+        article h3{
+            margin-block-start: 0em;
+        }
+        article input{
+            border: 2px solid black;
+            box-shadow: 2px 2px 1px 1px black;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <header>
+            <p>Your Gold:</p><span> {{request.session.fgold}}</span>
+        </header>
+        <article>
+            <div>
+                <h3>Farm</h3>
+                <p>(earns 10 - 20 golds)</p>
+                <form method="post" action="/process_money">
+                    {% csrf_token %}
+                    <input type="hidden" name="farm" value="farm">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div>
+                <h3>Cave</h3>
+                <p>(earns 5-10 golds)</p>
+                <form method="post" action="/process_money">
+                    {% csrf_token %}
+                    <input type="hidden" name="cave1" value="cave">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div>
+                <h3>House</h3>
+                <p>(earns 2-5 golds)</p>
+                <form method="post" action="/process_money">
+                    {% csrf_token %}
+                    <input type="hidden" name="house" value="house">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div>
+                <h3>Casino</h3>
+                <p>(earns/takes 0-50 golds)</p>
+                <form method="post" action="/process_money">
+                    {% csrf_token %}
+                    <input type="hidden" name="casino" value="casino">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+        </article>
+        <footer>
+            <p>Activities:</p>
+
+        </footer>
+    </main>
+
+</body>
+</html>

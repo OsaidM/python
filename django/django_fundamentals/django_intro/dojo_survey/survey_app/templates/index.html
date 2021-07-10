@@ -1,0 +1,64 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            border: 2px solid grey;
+            padding: 10px;
+        }
+        label{
+            display: inline-block;
+            margin:10px 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>hakuna matata</h1>
+        <form action="/handle" method="POST">
+            {% csrf_token %}
+            <label for="name">Your name: </label>
+            <input type="text" name="name" id="name"><br>
+            <label for="dojo_location">Dojo Location: </label>
+            <select name="dojo_location" id="dlocation"><br>
+                <option value="palestine">palestine</option>
+                <option value="germany">germany</option>
+                <option value="canada">canada</option>
+            </select><br>
+            <label for="Flanguage">Favourite Language: </label>
+            <select name="f_language" id="Flanguage"><br>
+                <option value="palestine">python</option>
+                <option value="germany">javascript</option>
+                <option value="java">java</option>
+                <option value="c++">c++</option>
+                <option value="ruby">ruby</option>
+            </select><br>
+            <label for="male">Your Gender: </label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <label for="genres">Choose your favourite genres: </label><br>
+            <input type="checkbox" id="vehicle1" name="genres" value="action">
+            <label for="vehicle1"> action</label>
+            <input type="checkbox" id="vehicle2" name="genres" value="Horror">
+            <label for="vehicle2"> Horror</label>
+            <input type="checkbox" id="vehicle3" name="genres" value="drama">
+            <label for="vehicle3"> drama</label><br>
+
+            <label for="comment">comment(Optional): </label><br>
+            <textarea name="comment" id="" cols="30" rows="10"></textarea><br>
+            <input type="submit" value="submit" name="submit">
+        </form>
+    </main>
+</body>
+</html>

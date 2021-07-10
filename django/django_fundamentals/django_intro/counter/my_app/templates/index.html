@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <style>
+        main{
+            width: 400px;
+            text-align: center;
+            margin: 0 auto;
+            border: 3px solid grey;
+        }
+        main > *{
+            margin:20px 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Visits</h1>
+        <h3>el hakuna matata</h3>
+        <p>{{ request.session.visits }} times.</p>
+        <p style="text-align: center;">{{ request.session.count }} times.</p>
+        <a href="/destroy_session" >Destroy Session</a>
+        <form action="/plus_two">
+            <button type="submit">Increment by 2</button>
+        </form>
+        <form action="/increment_by">
+            <input type="number" name="increment">
+            <button type="submit">Increment By</button>
+        </form>
+    </main>
+</body>
+</html>

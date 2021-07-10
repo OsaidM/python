@@ -1,0 +1,84 @@
+>>> from books_authors_app.models import *
+>>> Books.objects.create(title="C Sharp")
+<Books: Books object (1)>
+>>> Books.objects.create(title="Java")   
+<Books: Books object (2)>
+>>> Books.objects.create(title="Python")
+<Books: Books object (3)>
+>>> Books.objects.create(title="PHP")
+<Books: Books object (4)>
+>>> Books.objects.create(title="Ruby")
+<Books: Books object (5)>
+>>> Authors.objects.create(first_name="Jane", last_name="Austen")
+<Authors: Authors object (1)>
+>>> Authors.objects.create(first_name="Emily", last_name="Dickinson")
+<Authors: Authors object (2)>
+>>> Authors.objects.create(first_name="Fyodor", last_name="Dostoevsky")
+^[[A^[[B<Authors: Authors object (3)>
+>>> Authors.objects.create(first_name="William", last_name="Shakespeare")
+<Authors: Authors object (4)>
+>>> Authors.objects.create(first_name="Lau", last_name="Tzu")
+<Authors: Authors object (5)>
+
+
+
+book_to_update = Books.objects.get(title = "C Sharp")    
+>>> book_to_update.title = "C#"
+>>> book_to_update.save()
+>>> first_author = Authors.objects.first()
+>>> first_author.first_name = "Bill"
+>>> first_author.save()
+
+>>> first_book = Books.objects.first()
+>>> second_book = Books.objects.get(id = 2)
+>>> third_book = Books.objects.get(id = 3)
+>>> fourth_book = Books.objects.get(id = 4)
+
+>>> first_author.Books = first_book, second_book
+>>> second_author = Authors.objects.get(id = 2)
+>>> third_author = Authors.objects.get(id = 3)
+>>> fourth_author = Authors.objects.get(id = 4)
+>>> second_author.Books = first_book, second_book, third_book
+>>> third_author.Books = first_book, second_book, third_book, fourth_book
+>>> fourth_author.Books = Books.objects.all()
+
+
+>>> author1 = Authors.objects.first()
+>>> book1 = Books.objects.first()
+>>> author1.books.add(book1)
+
+>>> book2 = Books.objects.get(id = 2) 
+>>> book3 = Books.objects.get(id = 3) 
+>>> author1.books.add(book2, book3)  
+
+
+>>> author2 = Authors.objects.get(id = 2)
+>>> author2.books.add(book1,book2, book3)       
+>>> book4 = Books.objects.get(id = 4)     
+>>> book5 = Books.objects.get(id = 5) 
+>>> author3 = Authors.objects.get(id = 3) 
+>>> author4 = Authors.objects.get(id = 4) 
+>>> author3.books.add(book1,book2, book3,book4)
+
+>>> author4.books.add(book1,book2,book3,book4,book5)
+
+
+
+>>> third_book = Books.objects.get(id = 3)
+>>> third_book.authors.all()
+<QuerySet [<Authors: Authors object (1)>, <Authors: Authors object (2)>, <Authors: Authors object (3)>, <Authors: Authors object (4)>]>
+
+>>> third_book.authors.remove(author1)
+
+
+>>> third_book.authors.remove(author1)
+>>> author5 = Authors.objects.get(id = 5)
+>>> book2.authors.add(author5)
+
+
+>>> author3.books.all()
+<QuerySet [<Books: Books object (1)>, <Books: Books object (2)>, <Books: Books object (3)>, <Books: Books object (4)>]>
+
+
+>>> book5.authors.all()
+<QuerySet [<Authors: Authors object (4)>]>

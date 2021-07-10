@@ -1,0 +1,307 @@
+ 
+─ source py3Env/bin/activate
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/p/my_environments · ✔  py3Env   at 01:44:53 PM  ▓▒░
+╰─ pip install Django == 2.2.4
+zsh: = not found
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/p/my_environments 
+╰─ pip freeze                 
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/p/my_environments · ✔  py3Env   at 01:46:35 PM  ▓▒░
+╰─ pip list  
+Package    Version
+---------- -------
+pip        20.2.1
+setuptools 49.2.1
+WARNING: You are using pip version 20.2.1; however, version 20.2.4 is available.
+You should consider upgrading via the '/run/media/m5pa1k/b87f53a7-8a8c-4c70-99c1-da534a8a25d3/home/m5pa1k/Documents/Axsos/CodingDojo/python_stack/my_environments/py3Env/bin/python3 -m pip install --upgrade pip' command.                                                                  
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/p/my_environments · ✔  py3Env   at 01:46:56 PM  ▓▒░
+╰─ 
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/p/my_environments · ✔  py3Env   at 01:46:59 PM  ▓▒░
+╰─ pip freeze
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/p/my_environments · ✔  py3Env   at 01:47:02 PM  ▓▒░
+╰─ deactivate                 
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/python_stack/my_environments · ✔  at 01:48:23 PM  ▓▒░
+╰─ pip freeze
+apparmor==3.0.0
+appdirs==1.4.4
+application-utility==1.3.2
+asgiref==3.3.1
+asn1crypto==1.4.0
+btrfsutil==5.9
+CacheControl==0.12.6
+ceph==1.0.0
+ceph-volume==1.0.0
+cephfs==2.0.0
+cephfs-shell==0.0.1
+cffi==1.14.3
+chardet==3.0.4
+colorama==0.4.4
+contextlib2==0.6.0.post1
+cryptography==3.2.1
+cupshelpers==1.0
+distlib==0.3.1
+distro==1.5.0
+Django==3.1.3
+docopt==0.6.2
+html5lib==1.1
+idna==2.10
+Jade-Application-Kit==3.5.6
+keyutils==0.6
+lensfun==0.3.95
+LibAppArmor==3.0.0
+louis==3.15.0
+lxml==4.6.1
+msgpack==1.0.0
+netsnmp-python==1.0a1
+npyscreen==4.10.5
+numpy==1.19.4
+ordered-set==4.0.2
+packaging==20.4
+pacman-mirrors==4.16.4
+pep517==0.9.1
+Pillow==7.2.0
+ply==3.11
+progress==1.5
+pwquality==1.4.4
+pycairo==1.20.0
+pycparser==2.20
+pycups==2.0.1
+pycurl==7.43.0.6
+PyGObject==3.38.0
+pyOpenSSL==19.1.0
+pyparsing==2.4.7
+PyQt5==5.15.2
+PyQt5-sip==12.8.1
+PyQtWebEngine==5.15.2
+pysmbc==1.0.23
+python-libtorrent==1.2.10
+pytz==2020.4
+PyYAML==5.3.1
+rados==2.0.0
+rbd==2.0.0
+reportlab==3.5.55
+requests==2.24.0
+resolvelib==0.5.1
+retrying==1.3.3
+rgw==2.0.0
+scour==0.38.1
+sip==4.19.24
+six==1.15.0
+sqlparse==0.4.1
+team==1.0
+toml==0.10.2
+udiskie==2.2.0
+urllib3==1.25.10
+webencodings==0.5.1
+youtube-dl==2020.11.26
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/python_stack/my_environments · ✔  at 01:48:28 PM  ▓▒░
+╰─ pip list  
+Package              Version
+-------------------- -----------
+apparmor             3.0.0
+appdirs              1.4.4
+application-utility  1.3.2
+asgiref              3.3.1
+asn1crypto           1.4.0
+btrfsutil            5.9
+CacheControl         0.12.6
+ceph                 1.0.0
+ceph-volume          1.0.0
+cephfs               2.0.0
+cephfs-shell         0.0.1
+cffi                 1.14.3
+chardet              3.0.4
+colorama             0.4.4
+contextlib2          0.6.0.post1
+cryptography         3.2.1
+cupshelpers          1.0
+distlib              0.3.1
+distro               1.5.0
+Django               3.1.3
+docopt               0.6.2
+html5lib             1.1
+idna                 2.10
+Jade-Application-Kit 3.5.6
+keyutils             0.6
+lensfun              0.3.95
+LibAppArmor          3.0.0
+louis                3.15.0
+lxml                 4.6.1
+msgpack              1.0.0
+netsnmp-python       1.0a1
+npyscreen            4.10.5
+numpy                1.19.4
+ordered-set          4.0.2
+packaging            20.4
+pacman-mirrors       4.16.4
+pep517               0.9.1
+Pillow               7.2.0
+pip                  20.2
+ply                  3.11
+progress             1.5
+pwquality            1.4.4
+pycairo              1.20.0
+pycparser            2.20
+pycups               2.0.1
+pycurl               7.43.0.6
+PyGObject            3.38.0
+pyOpenSSL            19.1.0
+pyparsing            2.4.7
+PyQt5                5.15.2
+PyQt5-sip            12.8.1
+PyQtWebEngine        5.15.2
+pysmbc               1.0.23
+python-libtorrent    1.2.10
+pytz                 2020.4
+PyYAML               5.3.1
+rados                2.0.0
+rbd                  2.0.0
+reportlab            3.5.55
+requests             2.24.0
+resolvelib           0.5.1
+retrying             1.3.3
+rgw                  2.0.0
+scour                0.38.1
+setuptools           50.3.2
+sip                  4.19.24
+six                  1.15.0
+sqlparse             0.4.1
+team                 1.0
+toml                 0.10.2
+udiskie              2.2.0
+urllib3              1.25.10
+webencodings         0.5.1
+youtube-dl           2020.11.26
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/python_stack/my_environments · ✔  at 01:48:42 PM  ▓▒░
+╰─ cd Desktop        
+cd: no such file or directory: Desktop
+╭─░▒▓    /run/me/m/b/h/m/Doc/Ax/C/p/my_environments ·········· 1 ✘  at 01:51:58 PM  ▓▒░
+╰─ cd ~/Desktop
+╭─░▒▓    ~/Desktop ············································· ✔  at 01:52:10 PM  ▓▒░
+╰─ cd ..       
+╭─░▒▓    ~ ····················································· ✔  at 01:52:19 PM  ▓▒░
+╰─ cd ~/Desktop
+╭─░▒▓    ~/Desktop ············································· ✔  at 01:52:25 PM  ▓▒░
+╰─ pip freeze > requirements.txt
+╭─░▒▓    ~/Desktop ············································· ✔  at 01:52:39 PM  ▓▒░
+╰─ ls
+ AxsosLinks.txt  'good idioms.txt'                requirements.txt
+ commands2.txt   'MIT Terminus.txt'               Screenshot_20201029_001335.png
+ commands.txt    'portfolio_assignment_(1).png'   Tiledmenu-config
+╭─░▒▓    ~/Desktop ············································· ✔  at 01:52:44 PM  ▓▒░
+╰─ pip show Django              
+Name: Django
+Version: 3.1.3
+Summary: A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+Home-page: https://www.djangoproject.com/
+Author: Django Software Foundation
+Author-email: foundation@djangoproject.com
+License: BSD-3-Clause
+Location: /home/m5pa1k/.local/lib/python3.8/site-packages
+Requires: sqlparse, asgiref, pytz
+Required-by: 
+╭─░▒▓    ~/Desktop ············································· ✔  at 01:53:56 PM  ▓▒░
+╰─ pip search Flask
+Flask-SimpleMDE (0.3.0)      - Flask-SimpleMDE - a Flask extension for SimpleMDE
+Flask-Pure (0.5)             - Flask-Pure - a Flask extension for Pure.css
+Flask-OrientDB (0.1)         - A Flask extension for using OrientDB with Flask
+flask-zs (0.1.4)             - A helpers for Flask.
+sockjs-flask (0.3)           - SockJs for Flask
+Flask-Stripe (0.1.0)         - Flask-Stripe
+Flask-ElasticUtils (0.1.7)   - ElasticUtils for Flask
+Flask-PubSub (0.1.0)         - Flask-PubSub
+Flask-Waitress (0.0.1)       - Flask Waitress
+flask-helloworld (1.0.0)     - Flask Helloworld
+flask-live (0.0.1)           - Flask Live
+Flask-Quik (0.1.1)           - Quik for Flask
+Flask-Helper (1.2.2)         - Flask Helper
+Flask-GripControl (0.0.1)    - Flask GripControl
+Flask-TinyMce (0.1.6)        - flask tinymce
+Flask-SRI (0.1.0)            - Flask-SRI
+flask-ws (0.0.1.0)           - Websocket for flask.
+Flask-SPF (0.0.0)            - Flask-SPF
+flask-toolbox (0.0.2)        - A flask toolbox.
+Flask-Turbolinks (0.2.0)     - Turbolinks for Flask.
+Flask-Watson (0.1.0)         - Flask-Watson
+Flask-FileRev (0.1.0)        - Flask-FileRev
+Flask-Shopify (0.2)          - Shopify Flask
+Flask-BDEA (0.1.0)           - Flask-BDEA
+Flask-MDE (1.2.1)            - Pagedown for Flask
+Flask-Intercom (0.1.0)       - Flask-Intercom
+Flask-TaskTiger (0.0.1)      - Flask TaskTiger
+Flask-Ext (0.1)              - Extensions of Flask
+Flask-AutoIndex (0.6.6)      - The mod_autoindex for Flask
+Flask-Clearbit (0.1.0)       - Flask-Clearbit
+Flask-FontAwesome (0.1.5)    - FontAwesome for Flask
+Fifty-Flask (1.4.0)          - Flask enhancements.
+Flask-Chargebee (0.0.1)      - Flask-Chargebee
+Flask-Keen (0.1.0)           - Flask-Keen
+Flask-NextCaller (0.1.0)     - Flask-NextCaller
+Flask-Gears (0.2)            - Gears for Flask
+flask-mico (0.2.3)           - flask mico
+Flask-Weixin (0.5.0)         - Weixin for Flask.
+flask-abort (0.0.1)          - flask abort
+flask-ypaginate (0.1.3)      - Pagination for Flask
+Flask-OAuthlib (0.9.6)       - OAuthlib for Flask
+Flask-Mustache (0.4.1)       - Mustache for Flask
+flask-serializer (0.0.5.1)   - A Flask serializer built with marshmallow and flask-sqlalchemy
+airbrake-flask (1.0.7)       - airbrake-flask - Airbrake client for Python Flask
+Flask-hCaptcha (0.5.4)       - A hCaptcha extension for Flask based on flask-recaptcha
+Flask-GeoIP (0.1.3)          - Flask-GeoIP -------------  Simple Flask extension for pygeoip.
+Flask-Diced (0.3)            - Flask-Diced - CRUD views generator for Flask
+Flask-RESTive (0.0.3)        - Flask RESTive is a REST API Flask extension based on Flask-
+                               RESTful & Marshmallow.
+Flask-LoginManager (1.1.6)   - Flask-Loginmanager supports multiple roles and permissions for
+                               Flask, inspired by Flask-Login
+Flask-FlatPagesCut (0.5.1)   - Flask-FlatPagesCut is fork Flask-FlatPages (Provides flat
+                               static pages to a Flask application)
+flask-lesscss (0.9.1)        - A small Flask extension that adds LessCSS support to Flask.
+Flask-xCaptcha (0.5.1)       - The new xCaptcha implementation for Flask without Flask-WTF
+flask-coffee2js (0.1.2)      - A small Flask extension that adds CoffeScript support to
+                               Flask.
+Flask-Collect (1.3.2)        - Flask-Collect -- Collect static files in Flask application
+flask-shell (0.1.3)          - Flask extension to improve shell command for the Flask CLI.
+flask-stylus2css (0.1)       - A small Flask extension that adds Stylus support to Flask.
+flask-filters (0.3)          - The Flask Filter to use with flask-restful and Relational DB
+flask-creator (0.1.8)        - A flask tool to quickly create and launch flask app
+Flask-Shelve (0.1.1)         - Shelve support for Flask
+Flask-Edits (0.8)            - Editable Content in Flask
+Flask-CKEditor (0.4.4.1)     - CKEditor integration for Flask.
+Flask-Triangle (0.5.4)       - Integration of AngularJS and Flask.
+Flask-mongobit (0.3.0)       - MongoBit support in Flask
+Flask-SaeStorage (0.9.0)     - SAE Storage for Flask
+Flask-Navigation (0.2.0)     - The navigation of Flask application.
+flask-snow (0.2.8)           - Pysnow extension for Flask
+Flask-Slack (0.1.5)          - Slack extension for Flask.
+Flask-ZMQ (0.1.2)            - Flask extension for ZMQ
+Flask-Autodoc (0.1.2)        - Documentation generator for flask
+Flask-Vises (2.1.4)          - A Flask scaffold library
+Flask-PyFCM (0.1.1)          - Flask extension for PyFCM
+Flask-wechatpy (0.1.3)       - wechatpy for flask extension
+Flask-sshtunnel (0.1b2)      - sshtunnel extension for flask
+flask-fast (0.0.1.dev0)      - Flask-fast. It's fast.
+Flask-OpenID (1.2.5)         - OpenID support for Flask
+Flask-Zero (0.9.6)           - Qiniu Storage for Flask
+Flask-CuttlePool (0.2.1)     - A Flask extension for CuttlePool
+Flask-Funnel (0.1.10)        - Asset management for Flask.
+Flask-Breve (0.2)            - Breve templating with Flask
+flask-logsocketio (0.1.4)    - Flask LogSocketIo module
+Flask-Passlib (0.1)          - Flask extension for passlib
+flask-serial (1.1.0)         - Flask extension for the Serial
+flask-discoverer (0.1.4)     - Flask API autodiscovery
+Flask-Triangle3 (0.5.3)      - Integration of AngularJS and Flask.
+flask-mdict (1.1.5)          - Flask Mdict Server
+Flask-Testing (0.8.0)        - Unit testing for Flask
+Flask-Failsafe (0.2)         - A failsafe for the Flask reloader
+nailpack-flask (0.1.0)       - Flask support for nails
+flask-authentic (0.0.11)     - Flask Authentic Extension
+Flask-Avatar (0.1.3)         - To generate avatar for flask
+flask-adh (0.1)              - flask admin antd
+Flask-wangEditor (0.0.3.2)   - wangEditor integration for Flask.
+Flask-Sixpack (0.0.1)        - Flask wrapper for Sixpack
+flask-now (0.2.2)            - Flask App Generator
+flask-symphony (0.0.1.dev0)  - flask Admin Symphony
+Flask-MySQLdb (0.2.0)        - MySQLdb extension for Flask
+Flask-RBAC (0.3.0)           - RBAC support for Flask
+Flask-Airbrake (0.0.3)       - Flask extension for Airbrake
+castle-flask (0.0.1)         - A Flask client for Castle.io
+flask-handlers (0.0.1)       - Handlers for Flask applications

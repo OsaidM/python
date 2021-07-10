@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books & Authors</title>
+    <style>
+    main{
+        width: 970px;
+        margin: 0 auto;
+        display: block;
+        box-shadow: 0px 0px 3px 3px grey;
+        padding: 10px;
+    }
+    aside{
+        display: inline-block;
+        margin: 50px auto;
+        width: 54%;
+        vertical-align: top;
+    }
+    aside table{
+        text-align: left;
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    aside table th{
+        border: 2px solid black;
+        background-color: grey;
+    }
+    aside table td{
+        border: 1px solid black;
+    }
+    
+    section{
+        display: inline-block;
+        margin: 50px auto;
+        width:45%;
+        vertical-align: top;
+    }
+    section h2{
+        margin-block-start: 0;
+        text-align: center;
+    }
+    section table{
+        min-width:100%;
+    }
+    section table tr{
+        vertical-align: top;
+    }
+    input[type=submit]{
+        margin-top: 30px;
+        height:40px;
+        width:120px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 3px 1px black;
+    }
+    input[type=text]{
+        width:85%;
+        height: 20px;
+    }
+    textarea{
+        width:85%;  
+    }
+
+</style>
+</head>
+<body>
+    
+    <main>
+        <section>
+            <h2>Add a Book</h2>
+            <form action="addBook" method="POST">
+                {% csrf_token %}
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="title">Title:</label></td>
+                            <td><input type="text" name="title" id="title"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="description">Description:</label></td>
+                            <td><textarea name="description" id="text" cols="30" rows="10"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Add"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+        <aside>
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        {% for book in all_books %}
+                        <tr>
+                            <td>{{book.id}}</td>
+                            <td>{{book.title}}</td>
+                            <td><a href="view_books/{{book.id}}">View</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+        </aside>
+    </main>
+
+</body>
+</html>
