@@ -42,7 +42,3 @@ Login/reg, CRUD, favoriting
 -View the project on http://localhost:8000
 
 -Exit the terminal once done with the command: ctrl-c
-
-
-## Contact
-allensuzanne08@gmail.com
