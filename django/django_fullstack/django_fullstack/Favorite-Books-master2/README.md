@@ -43,6 +43,3 @@ Login/reg, CRUD, favoriting
 
 -Exit the terminal once done with the command: ctrl-c
 
-
-## Contact
-allensuzanne08@gmail.com
