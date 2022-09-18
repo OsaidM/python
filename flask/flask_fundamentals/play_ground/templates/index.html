@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>
+    <style>
+        main{
+            text-align: center;
+            background-color: rgba(104, 86, 86, 0.367);
+            padding-bottom:15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px black;
+        }
+        table{
+            border-collapse: collapse;
+            margin:0 auto;
+        }
+        td{
+            height:50px;
+            width: 50px;
+            margin: 0px;
+            
+        }
+        .color1{
+            background-color: #495c29;
+            background-color: {{color1}};
+        }
+        .color2{
+            background-color: #ffffe0;
+            background-color: {{color2}};
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>welcome to the board, the dimensions are:{{rows}}*{{columns}}</h1>
+        <table>
+            {% for i in range(rows) %}
+                <tr>
+                {% for j in range(columns) %}
+                    <td class="color{{(i+j)%2+1}}"></td>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
+</body>
+</html>
